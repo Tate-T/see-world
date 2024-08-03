@@ -1,0 +1,70 @@
+<section class="announcements-filter">
+    <div class="container">
+        <h2 class="announcements-title">Всі оголошення</h2>
+        <button class="announcements-button">Фільтр</button>
+        <form action="">
+            <ul class="announcements-list">
+                <li class="announcements-item">
+                    <h3>За типом оголошення</h3>
+                    <ul class="typeannounce-list">
+                        <li class="typeannounce-item">
+                             <input type="radio" id="html" name="fav_language">
+                             <label for="html">Всі оголошення</label><br>
+                        </li>
+                        <li class="typeannounce-item">
+                             <input type="radio" id="css" name="fav_language">
+                             <label for="css">Пропоную</label><br>
+                        </li>
+                        <li class="typeannounce-item">
+                             <input type="radio" id="javascript" name="fav_language">
+                             <label for="javascript">Шукаю</label>
+                        </li>
+                    </ul>
+                </li>
+                <li class="announcements-item">
+                    <h3>Категорія оголошення</h3>
+                    <ul class="homeannounce-list">
+                        <li class="homeannounce-item">  
+                            <input type="checkbox" id="vehicle1" value="Будинок">
+                            <label for="vehicle1">Будинок</label><br></li>
+                        <li class="homeannounce-item">
+                            <input type="checkbox" id="vehicle2" value="Квартира">
+                            <label for="vehicle2">Квартира</label><br>
+                        </li>
+                        <li class="homeannounce-item">
+                            <input type="checkbox" id="vehicle3" value="Студія">
+                            <label for="vehicle3">Студія</label><br>
+                        </li>
+                        <li class="homeannounce-item">
+                            <input type="checkbox" id="vehicle3"value="Кімната">
+                            <label for="vehicle3">Кімната</label><br>
+                        </li>
+                    </ul>
+                </li>
+                <li class="announcements-item">
+                    <h3>Виберіть країну</h3>
+                    <select class="select-text" name="Країна">
+                        <option value="Україна">Україна</option>
+                        <option value="Франція">Франція</option>
+                        <option value="Італія">Італія</option>
+                        <option value="Польща">Польща</option>
+                        <option value="Швейцарія">Швейцарія</option>
+                    </select>
+                </li>
+                <li class="announcements-item">
+                    <ul class="announcedate-list">
+                        <li class="announcedate-item">
+                            <h4>Виберіть дату приїзду</h4>
+                            <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31" />
+                        </li>
+                        <li class="announcedate-item">
+                            <h4>Виберіть дату від’їзду</h4>
+                            <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31" />
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="announcements-submit" type="submit">Застосувати фільтр</button>
+        </form>
+    </div>
+</section>
