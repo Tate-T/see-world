@@ -32,35 +32,39 @@
     />
     
     <script type="module" crossorigin src="/see-world/assets/index-f50099a9.js"></script>
-    <link rel="stylesheet" href="/see-world/assets/advertisement-5603ffaa.css">
+    <link rel="stylesheet" href="/see-world/assets/advertisement-e9929a30.css">
   </head>
   <body>
     <header class="header">
   <div class="container header__container">
     <button class="header__btn">
       <svg class="header__icone">
-        <use href="/see-world/assets/symbol-defs-5128f803.svg#icon-menu" data-menu-open></use>
+        <use href="/see-world/assets/symbol-defs-510b17de.svg#icon-menu" data-menu-open></use>
       </svg>
     </button>
     <a href="/" class="header__logo">
       <svg class="header__icon">
-        <use href="/see-world/assets/symbol-defs-5128f803.svg#icon-logo"></use>
+        <use href="/see-world/assets/symbol-defs-510b17de.svg#icon-logo"></use>
       </svg>
 
       <p class="header__text">See World</p>
     </a>
     <ul class="header__list">
       <li class="hesder__item">
-        <a href="/" class="header__page">Головна </a>
+        <a href="./" class="header__page">Головна </a>
       </li>
       <li class="header__item">
-        <a href="../advertisement.html" class="header__page">Всі оголошення</a>
+        <a href="./advertisement.html" class="header__page">Всі оголошення</a>
       </li>
 
       <li class="header__item">
-        <a href="/">
+
+        <a href="../signin.html">
+
+        <a href="../partials/login-page/signin.html">
+
           <svg class="header__heart">
-            <use href="/see-world/assets/symbol-defs-5128f803.svg#icon-heart"></use>
+            <use href="/see-world/assets/symbol-defs-510b17de.svg#icon-heart"></use>
           </svg>
         </a>
       </li>
@@ -68,7 +72,7 @@
       <li class="header__item">
         <a href="../cabinet.html" class="header__page header__flex">
           <svg class="header__user">
-            <use href="/see-world/assets/symbol-defs-5128f803.svg#icon-user"></use>
+            <use href="/see-world/assets/symbol-defs-510b17de.svg#icon-user"></use>
           </svg>
 
           Особистий кабінет</a
@@ -82,9 +86,14 @@
     <main>
         <section class="advert">
   <div class="container">
-    <h1 class="advert__heding">Всі оголошення</h1>
-    <div class="advert__div">
-      <ul class="advert__choice">
+    <div id="advertContainer">
+      <h1 class="advert__heding">Всі оголошення</h1>
+      <button id="closeAdvert" onclick="filterClose()" class="advert__button">
+        Фільтр
+      </button>
+    </div>
+    <div id="advertDiv" class="advert__div">
+      <ul id="advertList" class="advert__choice">
         <li>
           <input id="checkbox" class="advert__input" type="checkbox" />
           <label class="advert__label" for="checkbox">Всі оголошення</label>
@@ -98,9 +107,104 @@
           <label class="advert__label" for="checkbox">Шукаю</label>
         </li>
       </ul>
-      <button class="advert__button">Фільтр</button>
+      <button onclick="filterOpen()" class="advert__button">Фільтр</button>
     </div>
-    <div class="advert__open">
+    <form id="advertForm">
+      <ul class="announcements__list">
+        <li class="announcements__item">
+          <h3>За типом оголошення</h3>
+          <ul class="typeannounce-list">
+            <li class="typeannounce-item">
+               <input type="radio" id="html" name="fav_language" />  <label
+                for="html"
+                >Всі оголошення</label
+              ><br />
+            </li>
+            <li class="typeannounce-item">
+               <input type="radio" id="css" name="fav_language" />  <label
+                for="css"
+                >Пропоную</label
+              ><br />
+            </li>
+            <li class="typeannounce-item">
+               <input type="radio" id="javascript" name="fav_language" />
+               <label for="javascript">Шукаю</label>
+            </li>
+          </ul>
+        </li>
+        <li class="announcements__item">
+          <h3>Категорія оголошення</h3>
+          <ul class="homeannounce-list">
+            <li class="homeannounce-item">
+              <input type="checkbox" id="vehicle1" value="Будинок" />
+              <label for="vehicle1">Будинок</label><br />
+            </li>
+            <li class="homeannounce-item">
+              <input type="checkbox" id="vehicle2" value="Квартира" />
+              <label for="vehicle2">Квартира</label><br />
+            </li>
+            <li class="homeannounce-item">
+              <input type="checkbox" id="vehicle3" value="Студія" />
+              <label for="vehicle3">Студія</label><br />
+            </li>
+            <li class="homeannounce-item">
+              <input type="checkbox" id="vehicle3" value="Кімната" />
+              <label for="vehicle3">Кімната</label><br />
+            </li>
+          </ul>
+        </li>
+        <li class="announcements__item">
+          <h3>Виберіть країну</h3>
+          <select class="select-text" name="Країна">
+            <option value="Україна">Україна</option>
+            <option value="Франція">Франція</option>
+            <option value="Італія">Італія</option>
+            <option value="Польща">Польща</option>
+            <option value="Швейцарія">Швейцарія</option>
+            <option value="Латвія">Латвія</option>
+            <option value="Словенія">Словенія</option>
+            <option value="Іспанія">Іспанія</option>
+            <option value="Португалія">Португалія</option>
+            <option value="Фінляндія">Фінляндія</option>
+            <option value="Норвегія">Норвегія</option>
+            <option value="Данія">Данія</option>
+            <option value="Германія">Германія</option>
+            <option value="Хорватія">Хорватія</option>
+            <option value="Нідерланди">Нідерланди</option>
+          </select>
+        </li>
+        <li class="announcements__item">
+          <ul class="announcedate-list">
+            <li class="announcedate-item">
+              <h4>Дата приїзду</h4>
+              <input
+                type="date"
+                id="start"
+                name="trip-start"
+                value="2018-07-22"
+                min="2018-01-01"
+                max="2018-12-31"
+              />
+            </li>
+            <li class="announcedate-item">
+              <h4>Дата від’їзду</h4>
+              <input
+                type="date"
+                id="start"
+                name="trip-start"
+                value="2018-07-22"
+                min="2018-01-01"
+                max="2018-12-31"
+              />
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <button class="announcements__submit" type="submit">
+        Застосувати фільтр
+      </button>
+    </form>
+    <div id="advertOpen" class="advert__open">
       <h3 class="advert__title">Суперекономія</h3>
       <button class="advert__btnopen">Відкрити всі оголошення</button>
     </div>
@@ -206,7 +310,7 @@
           />
           <img
             class="advert__img"
-            src="../images/mobile/KViHotel@mobile-1x.webp"
+            src="../../images/desktop/KViHotel@desktop-1x.webp"
             alt="house"
           />
         </picture>
@@ -225,7 +329,7 @@
       <button class="advert__btnopen">Відкрити всі оголошення</button>
     </div>
     <ul class="advert__list">
-      <li class="advert__card">
+      <li class="advert__cardd">
         <picture>
           <source
             srcset="
@@ -263,7 +367,7 @@
           <p class="advert__rating">7,4</p>
         </div>
       </li>
-      <li class="advert__card">
+      <li class="advert__cardd">
         <picture>
           <source
             srcset="
@@ -301,7 +405,7 @@
           <p class="advert__rating">6,9</p>
         </div>
       </li>
-      <li class="advert__card">
+      <li class="advert__cardd">
         <picture>
           <source
             srcset="
@@ -345,7 +449,7 @@
       <button class="advert__btnopen">Відкрити всі оголошення</button>
     </div>
     <ul class="advert__lists">
-      <li class="advert__card">
+      <li class="advert__car">
         <picture>
           <source
             srcset="
@@ -383,7 +487,7 @@
           <p class="advert__rating">7,2</p>
         </div>
       </li>
-      <li class="advert__card">
+      <li class="advert__car">
         <picture>
           <source
             srcset="
@@ -421,7 +525,7 @@
           <p class="advert__rating">6,4</p>
         </div>
       </li>
-      <li class="advert__card">
+      <li class="advert__car">
         <picture>
           <source
             srcset="
@@ -461,7 +565,7 @@
       </li>
     </ul>
     <ul class="advert__lists">
-      <li class="advert__card">
+      <li class="advert__cad">
         <picture>
           <source
             srcset="
@@ -499,7 +603,7 @@
           <p class="advert__rating">9.2</p>
         </div>
       </li>
-      <li class="advert__card">
+      <li class="advert__cad">
         <picture>
           <source
             srcset="
@@ -537,7 +641,7 @@
           <p class="advert__rating">6,5</p>
         </div>
       </li>
-      <li class="advert__card">
+      <li class="advert__cad">
         <picture>
           <source
             srcset="
@@ -577,7 +681,7 @@
       </li>
     </ul>
     <ul class="advert__lists">
-      <li class="advert__card">
+      <li class="advert__cadr">
         <picture>
           <source
             srcset="
@@ -615,7 +719,7 @@
           <p class="advert__rating">6,1</p>
         </div>
       </li>
-      <li class="advert__card">
+      <li class="advert__cadr">
         <picture>
           <source
             srcset="
@@ -653,7 +757,7 @@
           <p class="advert__rating">9,2</p>
         </div>
       </li>
-      <li class="advert__card">
+      <li class="advert__cadr">
         <picture>
           <source
             srcset="
@@ -693,7 +797,7 @@
       </li>
     </ul>
     <ul class="advert__list">
-      <li class="advert__card">
+      <li class="advert__cards">
         <picture>
           <source
             srcset="
@@ -731,7 +835,7 @@
           <p class="advert__rating">8,8</p>
         </div>
       </li>
-      <li class="advert__card">
+      <li class="advert__cards">
         <picture>
           <source
             srcset="
@@ -769,7 +873,7 @@
           <p class="advert__rating">5,5</p>
         </div>
       </li>
-      <li class="advert__card">
+      <li class="advert__cards">
         <picture>
           <source
             srcset="
@@ -814,6 +918,7 @@
       <ul class="advert__lisst">
         <li>
           <svg
+            class="advert__icon"
             xmlns="http://www.w3.org/2000/svg"
             width="32"
             height="32"
@@ -849,6 +954,7 @@
         <li><a class="advert__number" href="/">4</a></li>
         <li>
           <svg
+            class="advert__icon"
             xmlns="http://www.w3.org/2000/svg"
             width="32"
             height="32"
@@ -885,8 +991,8 @@
 
     </main>
     <footer class="footer">
-    <div class="container">
-        <div class="footer__container">
+    <div class="container footer__container">
+        <div class="footer__box">
             <a class="footer__logo" href="">
                 <img class="footer__photo" src="data:image/webp;base64,UklGRiIEAABXRUJQVlA4WAoAAAAQAAAANgAANgAAQUxQSGsCAAABoFXbVhjZ2hJwcI8EHDwk4KBx0Dio4yA4IA7yHCAhEo4EJOyPSshJK4iICYCz5KrfJUX82VCPyXP0T8n/SaptK/IX0uC94lrqlt9KJ28nM1bLKG/Ewet59prwsBzi9qtpfs2RAOTjHLoSo358Qo8IXwrHED/GaUdwEOsCyDEqHkoWQEny6DR5JGYBvvk8A0KuxtxIkwdi9VN9dKZpEqJpD3KSJkvBSHIEDyC2bTOSnJMkz7BSB8k5ik9QPtwWyiCthtF9AH3AfCM2yVkjfM3G5Oh1druZ4aqTHC3AeZJsglx2VZJyTOqF0Djgf5AmQJBQfkY/a042w1cnD7z50TrMbEhCOippRgUgJOWNX97iO5bdyDMAhRx4MfPeukgFpJKzAoMmL8i5QHLQeh0kBwJZ4J8nnWfIVeoLRs8+Oc/UgOhX6Dob2euGrNGt+lBJdu2IZcTgk53GTp7WEeD+cWIiz3MW+O9efe6qWhCSV/Kixk1DyzbtUBcUrzm0Q3Z+by6oTmxNgXJBO8QBZZIctTwRVaBfkeYBEQQAkpcatAG2IB73acUArf9w3tE28dOVglhiwVgg7dDgJHY3gRLRkJZI2scH9c6ABmjAeMDpFO6I2IBUUJ40J9iNBYsAFGhrFpyEt60NACgJaEsJzv1GYeULHch/YdwgGS5ThizBW68MJV1hC1hRt3AlorgNCruyhBcvFCp3SHW/+h9vHiR3fCJW67wweSVzKn4q1vWrCV4NGfhRPFWeVfD6j+K5drz/qfDMKi9Jj/AVLa/8aoB7HsktacKrZS/BIVRNeD22rciSlFYT/mYser9rEbgCAFZQOCCQAQAAsAkAnQEqNwA3AD6ROJVHpaMiITP02qiwEglsALs5ADo3qE+S4kPgHVJINrgeoDbAeYDzyPQ3/lN8A3kP/BgvA++NyEvVwpMgBOop7MSc0uN63qbn9QAA/vMD//sg//sZj//YexAhrDc/fvTQtPXs7GJcTwTIePBKbAmRZ+xKP8PN0GW5nGVSoiZsFdNKInSFmCm7B9nz4suuT12v/CbZBXrbVFcXcpXmue4Nfum35HpHQ9J6NO97T5/2sG//9QgYlSNgl45PG9/aAJSQVLgDlZ99+j2ZaJKYVDFdggVsguCTb34mDFdPip6/2Es/dzwMpYe45NmG3d0TOAwcdcckQFs0Mp4HisWEWsDe1CnYU5NyOsw3A3rYZw3hd3fvOr//ykitrxOn/Wo8H0rNb8HuICxJKwta9wzoeQyLC1msREzGBpNIOY7/rD61/IE7tG6WpP+Uf//1CBAO9lcgY5BbSe4bsWS7aTW803N1LNVTCSAXRCcS/IcWsQTWkOY3Ll/2Rzi7nZYb+Zk5//9jCTgAAA==" alt="planet">See World</a>
 
@@ -903,36 +1009,37 @@
                 </li>
                 <li class="footer__item">
                     <a class="footer__link" href="">Особистий кабінет</a>
-                    <ul class="footer__socials">
-                        <li class="footer__item">
-                            <a href="">
-                                <img class="footer__social" src="data:image/webp;base64,UklGRgoBAABXRUJQVlA4WAoAAAAQAAAAFwAAFwAAQUxQSHAAAAABf2CQbaQ/gqvBK7y/3ktERI5v9lKA40iSHKXRcmJwDBvABMzjiQkbOHAuzA9NfXYWaUBE/ydAr6/2YMkR8OSx7kWy63rKDpvtkyS8gGXhSpseeIBVwEqDJJ3mLZdJDSswqDzwoFM9PFz/ARoKWJYDVlA4IHQAAACQBACdASoYABgAPpE6mUeloyKhKA1QsBIJaAC7OUE0A4QzQEIAAKTH2nmGW6AA/vxHayMkOTNclLDBo60cibfRwErFdjU7a1/I7ZpXZvaX19rzu938Dh8A3VDqVLH1hX//ZVa7KOkvWl7ef+9a4kdwBLAAAA==" alt="facebook">
-                            </a>
-                        </li>
-                        <li class="footer__list">
-                            <a href="">
-                                <img class="footer__social" src="data:image/webp;base64,UklGRnQBAABXRUJQVlA4WAoAAAAQAAAAFwAAFwAAQUxQSKwAAAABgFXbbt1IEMSggmAIhhAIhhAGEYOEgcsgZWAIhiAIhnB+8mpnAETEBMg/mte9R3Aa0dtaRGTh0UUy+JTMVI7NUvZB3ljlQWdr5KM5X5n4dNJBhmpnRgz0DBY7UgbISX9DlAOBK01swPyENQh7YMBwlZPgdQKbyrERnXSg0bKcZ9qbcnBz5jPT7Z4GRQN622ut7u611tpiECq282AzERFNeSpldncvpZScVP5TVlA4IKIAAABwBQCdASoYABgAPpFCm0olo6IhqAgAsBIJbACdMyQCroAP0r8yv9M+D/0p32a/+2BCupfAAP7tBywa3wBxdMPi41beWhMB+YLSweNO+EJiZljXfFT4t1a4+DeOySzamyh5vMC0pklB+f5dwBBLtGY1j/lK0CY0X/afH8u1zk//2Rz0LOKlvFj2p/9gAs81/9vutEW6lRmx/+/Gh6+/8qrAAAA=" alt="youtube">
-                            </a>
-                        </li>
-                        <li class="footer__item">
-                            <a href="">
-                                <img class="footer__social" src="data:image/webp;base64,UklGRmwBAABXRUJQVlA4WAoAAAAQAAAAFwAAFwAAQUxQSJsAAAABgFZbb9jmQRCDGkIhGIIhmEHLIGIwSIZgCIIQCN8P50grg4iYAH5p11J6z6cWKkc7QtGN7AiFwVQYRQs5bA3SzRtdCyTyLsekzFjSnjRvkLr0+MeZmdLXmLdmZekLMLQqt+xAqr3+acmPj3alS1ezS5oVXI9Oife679VJ2UP+WOq1oQ2usIqFJlgoRsp6KABaqBztgLlzy41fAgBWUDggqgAAAJAFAJ0BKhgAGAA+kT6bSSWjIqEoCqiwEglqAJ0yhHtfoFyGcA2wHPHaYB6AHld+ymBCfqgAAP7tBy5Ido5P8OcDocm4KcchX18xx28Mu5od4NzhMjmd1qf+9Cw8I1lx7QrmvDSp9nTlZ2wn3UgWnP/um2MSNBxvHgnGUh8FhEprtaLdipDFR/5H8VofJehM2lTA1RGbCBoTura9FAjnHOe2yNO2PxSgAAAA" alt="instagram">
-                            </a>
-                        </li>
-                        <li class="footer__item"><a href="">
-                                <img class="footer__social" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKTSURBVHgB3VVNchJREO5+M8QtN3CsEnQXcgLJCcQTOMDWGHMC4AQQE3RHxhOIJwBPIO5S0SrnBrKyKjPDa7vf/MDwn7gyHzXM+/26v36vewD+dyDcA8/drjOzDlpIusYURR7y+RkHOuz43pn/1L2oKoVXOQNm0LIeB7PbL7xouom83PzwGmjWS4iXMSWECRJUk76vMnKFIyDtFVShC1s8T8mJ6DzQ1pObwRsWgkdA9ImXFBfIBWOjoFS/6CHi6Xwch4EOzkRuzvvGpch2+fGYuL7sQKnx3gVUp2ykAkDTQEdHRgEoPIyXUAdMPKl2oAoj2eC43cVQ1ORPYg1rEOrZMCaX2KM5D6Og3Lz8BjwhUi0IplrZHCaspRs5rmOen/Did9KXsMAGsEpaXGMUsFXjZWQ9+n3NVm8GJ68IdN0Qx/PVlPyusDdN/Bi89fjlycGGYFcsFUsnIH/THlmrTQv9nAHeNOFBx6Y/x0K6uOk6Pmh5hrADEdiOhIRw7kQcIsCv8dt6Cf8AxPgSgKbvOQO3OvTiLtUcuev3NoDGQaK5WmNAMlcSR9oFLHxeupp7QZKVX47Q/fROxjkDgpCitkyyzAobGd1VSVp7+PblciQzICqUDo9TI2miwR4oN/qt1Pvk9q0aEMiNESMcw7FsQFBXnDi/tpE/a/a5xFBb2lrTSvnI8kDiXoADh9SsamoswV6e89m14x51FmOfGUg8dJJF/FOSudKWks0VM+otb5IDRQtbfF2qKTlnfxvWwGbG6epnB4da0XkU2T4vKTrux6IFEWezOuQkqpqSHCv0JSzrPM+Y5E8OE7nMQlIJd2OubtvHKTOQouT2K4rPgNB6wST8cYEsH7jw+ZKhkkQRRJNdxA8HfwGNcDR8dvZxmQAAAABJRU5ErkJggg==" alt="twitter">
-                            </a>
-                        </li>
-                    </ul>
                 </li>
             </ul>
         </div>
+        <ul class="footer__socials">
+            <li class="footer__item">
+                <a href="">
+                    <img class="footer__social" src="data:image/webp;base64,UklGRgoBAABXRUJQVlA4WAoAAAAQAAAAFwAAFwAAQUxQSHAAAAABf2CQbaQ/gqvBK7y/3ktERI5v9lKA40iSHKXRcmJwDBvABMzjiQkbOHAuzA9NfXYWaUBE/ydAr6/2YMkR8OSx7kWy63rKDpvtkyS8gGXhSpseeIBVwEqDJJ3mLZdJDSswqDzwoFM9PFz/ARoKWJYDVlA4IHQAAACQBACdASoYABgAPpE6mUeloyKhKA1QsBIJaAC7OUE0A4QzQEIAAKTH2nmGW6AA/vxHayMkOTNclLDBo60cibfRwErFdjU7a1/I7ZpXZvaX19rzu938Dh8A3VDqVLH1hX//ZVa7KOkvWl7ef+9a4kdwBLAAAA==" alt="facebook">
+                </a>
+            </li>
+            <li class="footer__list">
+                <a href="">
+                    <img class="footer__social" src="data:image/webp;base64,UklGRnQBAABXRUJQVlA4WAoAAAAQAAAAFwAAFwAAQUxQSKwAAAABgFXbbt1IEMSggmAIhhAIhhAGEYOEgcsgZWAIhiAIhnB+8mpnAETEBMg/mte9R3Aa0dtaRGTh0UUy+JTMVI7NUvZB3ljlQWdr5KM5X5n4dNJBhmpnRgz0DBY7UgbISX9DlAOBK01swPyENQh7YMBwlZPgdQKbyrERnXSg0bKcZ9qbcnBz5jPT7Z4GRQN622ut7u611tpiECq282AzERFNeSpldncvpZScVP5TVlA4IKIAAABwBQCdASoYABgAPpFCm0olo6IhqAgAsBIJbACdMyQCroAP0r8yv9M+D/0p32a/+2BCupfAAP7tBywa3wBxdMPi41beWhMB+YLSweNO+EJiZljXfFT4t1a4+DeOySzamyh5vMC0pklB+f5dwBBLtGY1j/lK0CY0X/afH8u1zk//2Rz0LOKlvFj2p/9gAs81/9vutEW6lRmx/+/Gh6+/8qrAAAA=" alt="youtube">
+                </a>
+            </li>
+            <li class="footer__item">
+                <a href="">
+                    <img class="footer__social" src="data:image/webp;base64,UklGRmwBAABXRUJQVlA4WAoAAAAQAAAAFwAAFwAAQUxQSJsAAAABgFZbb9jmQRCDGkIhGIIhmEHLIGIwSIZgCIIQCN8P50grg4iYAH5p11J6z6cWKkc7QtGN7AiFwVQYRQs5bA3SzRtdCyTyLsekzFjSnjRvkLr0+MeZmdLXmLdmZekLMLQqt+xAqr3+acmPj3alS1ezS5oVXI9Oife679VJ2UP+WOq1oQ2usIqFJlgoRsp6KABaqBztgLlzy41fAgBWUDggqgAAAJAFAJ0BKhgAGAA+kT6bSSWjIqEoCqiwEglqAJ0yhHtfoFyGcA2wHPHaYB6AHld+ymBCfqgAAP7tBy5Ido5P8OcDocm4KcchX18xx28Mu5od4NzhMjmd1qf+9Cw8I1lx7QrmvDSp9nTlZ2wn3UgWnP/um2MSNBxvHgnGUh8FhEprtaLdipDFR/5H8VofJehM2lTA1RGbCBoTura9FAjnHOe2yNO2PxSgAAAA" alt="instagram">
+                </a>
+            </li>
+            <li class="footer__item"><a href="">
+                    <img class="footer__social" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKTSURBVHgB3VVNchJREO5+M8QtN3CsEnQXcgLJCcQTOMDWGHMC4AQQE3RHxhOIJwBPIO5S0SrnBrKyKjPDa7vf/MDwn7gyHzXM+/26v36vewD+dyDcA8/drjOzDlpIusYURR7y+RkHOuz43pn/1L2oKoVXOQNm0LIeB7PbL7xouom83PzwGmjWS4iXMSWECRJUk76vMnKFIyDtFVShC1s8T8mJ6DzQ1pObwRsWgkdA9ImXFBfIBWOjoFS/6CHi6Xwch4EOzkRuzvvGpch2+fGYuL7sQKnx3gVUp2ykAkDTQEdHRgEoPIyXUAdMPKl2oAoj2eC43cVQ1ORPYg1rEOrZMCaX2KM5D6Og3Lz8BjwhUi0IplrZHCaspRs5rmOen/Did9KXsMAGsEpaXGMUsFXjZWQ9+n3NVm8GJ68IdN0Qx/PVlPyusDdN/Bi89fjlycGGYFcsFUsnIH/THlmrTQv9nAHeNOFBx6Y/x0K6uOk6Pmh5hrADEdiOhIRw7kQcIsCv8dt6Cf8AxPgSgKbvOQO3OvTiLtUcuev3NoDGQaK5WmNAMlcSR9oFLHxeupp7QZKVX47Q/fROxjkDgpCitkyyzAobGd1VSVp7+PblciQzICqUDo9TI2miwR4oN/qt1Pvk9q0aEMiNESMcw7FsQFBXnDi/tpE/a/a5xFBb2lrTSvnI8kDiXoADh9SsamoswV6e89m14x51FmOfGUg8dJJF/FOSudKWks0VM+otb5IDRQtbfF2qKTlnfxvWwGbG6epnB4da0XkU2T4vKTrux6IFEWezOuQkqpqSHCv0JSzrPM+Y5E8OE7nMQlIJd2OubtvHKTOQouT2K4rPgNB6wST8cYEsH7jw+ZKhkkQRRJNdxA8HfwGNcDR8dvZxmQAAAABJRU5ErkJggg==" alt="twitter">
+                </a>
+            </li>
+        </ul>
 
 
         <p class="footer__text">©Всі права захищені.</p>
     </div>
 
 </footer>
+    <script src="./js/advestisement.js"></script>
     
     <script src="./js/menu.js"></script>
   </body>

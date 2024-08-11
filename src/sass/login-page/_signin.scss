@@ -218,30 +218,12 @@
     }
   }
   
-
-  display: none;
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-    padding-left: 32px;
-    padding-right: 80px;
-    padding-bottom: 20px;
-    padding-top: 10px;
-  }
-  @media screen and (min-width: 1200px) {
-    padding-left: 80px;
-    padding-right: 80px;
-    padding-bottom: 20px;
-    padding-top: 10px;
-  }
-
   .signin-page {
     color: #53585f;
     font-size: 16px;
     font-weight: 400;
     word-wrap: break-word;
   }
-}
 
 .signin {
   display: flex;
