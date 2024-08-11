@@ -1,0 +1,217 @@
+.create{
+    padding-top: 10px;
+    padding-bottom: 48px;
+
+    &__location{
+        color: $info-color;
+font-family: Rowdies;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+display: none;
+
+@media screen and (min-width:834px) {
+    display: block;
+}
+
+@media screen and (min-width:1440px) {
+    display: block;
+}
+    }
+
+    &__title{
+        color: $text-color;
+text-align: center;
+font-family: Play;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%;
+margin-top: 0px;
+margin-bottom: 32px;
+
+@media screen and (min-width:834px) {
+    margin-top: 46px;
+}
+
+@media screen and (min-width:1440px) {
+    margin-top: 46px;
+}
+    }
+
+    &__center{
+        border: none;
+        padding: 32px 0px;
+
+        @media screen and (min-width:834px) {
+            padding: 32px 135px;
+            border: solid 2px $link-color;
+        }
+        
+        @media screen and (min-width:1440px) {
+            padding: 32px 389px;
+            border: solid 2px $link-color;
+        }
+    }
+
+    &__input-title{
+        color: $text-color;
+font-family: Play;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%;
+margin-top: 36px; 
+margin-bottom: 20px;
+text-align: center;
+
+        .create__list &{
+            margin-top: 0px;
+            padding-top: 36px;
+            text-align: start;
+        }
+
+        .create__item:first-of-type &{
+            margin-top: 0px;
+            padding-top: 0px;
+        }
+
+        .create__center &:first-of-type{
+            text-align: start;
+        }
+    }
+
+    &__input{
+        width: 100%;
+padding: 12px 16px 12px 16px;
+border: 3px solid $link-color;
+    }
+
+    &__checkbox{
+        width: 18px;
+height: 18px;
+        .create__item:first-of-type &{
+            margin-right: 115px;
+            &::after{
+                content: "Будинок";
+            }
+        }
+        .create__item:nth-of-type(2) &{
+            margin-right: 127px;
+            &::after{
+                content: "Квартира";
+            }
+        }
+        .create__item:nth-of-type(3) &{
+            margin-right: 111px;
+            &::after{
+                content: "Кімната";
+            }
+        }
+        .create__item:last-of-type &{
+            &::after{
+                content: "Студія";
+            }
+        }
+
+        &::after{
+
+            padding-left: 28px;
+            color: $text-color;
+text-align: center;
+font-family: Play;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%;
+        }
+    }
+
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+
+        &:first-child{
+            flex-direction: column;
+        }
+
+        &:nth-of-type(2){
+            margin-top: 24px;
+            row-gap: 24px;
+        }
+
+        &:last-of-type{
+            flex-direction: column;
+            gap: 9px;
+            
+        }
+    }
+
+    &__item{
+        display: flex;
+
+        .create__list:first-child &{
+            flex-direction: column;
+        }
+    }
+
+    &__text{
+        color: $text-color;
+font-family: Play;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 100%;
+margin-right: auto;
+    }
+
+    &__number{
+        color: $text-color;
+text-align: center;
+font-family: "Open Sans";
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%;
+margin:0px 26px;
+    }
+
+    &__button{
+        width: 20px;
+height: 20px;
+background-image: url();
+cursor: pointer;
+    }
+
+    &__comment{
+        width: 100%;
+height: 126px;
+border: 2px solid $link-color;
+padding: 12px 16px 12px 16px;
+    }
+
+    &__photo-text{
+        color: $additional-color;
+font-family: Play;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%;
+margin-bottom: 36px;
+    }
+
+    &__button-submit{
+        width: 100%;
+        margin-top: 36px;
+        background-color: $link-color;
+        color: $button-text-color;
+text-align: center;
+font-family: Play;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 100%;
+padding: 16px 32px;
+    }
+}
