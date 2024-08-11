@@ -50,5 +50,10 @@
 <path d="M10 13.125H30V16.875H10V13.125Z" fill="#266294"/>
 <path d="M0 26.25H40V30H0V26.25Z" fill="#266294"/>
 </symbol>
+<symbol id="icon-arrow" viewBox="0 0 34 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.2" d="M16.8 29.332c7.364 0 13.333-5.97 13.333-13.333s-5.97-13.333-13.333-13.333c-7.364 0-13.333 5.97-13.333 13.333s5.97 13.333 13.333 13.333z"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.2" d="M16.8 21.332l5.333-5.333-5.333-5.333"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.2" d="M11.467 16h10.667"></path>
+</symbol>
 </defs>
 </svg>

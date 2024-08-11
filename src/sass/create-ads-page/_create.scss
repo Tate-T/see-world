@@ -4,7 +4,6 @@
 
     &__location{
         color: $info-color;
-font-family: Rowdies;
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
@@ -180,8 +179,8 @@ margin:0px 26px;
     &__button{
         width: 20px;
 height: 20px;
-background-image: url();
 cursor: pointer;
+padding: 0px;
     }
 
     &__comment{
@@ -213,5 +212,11 @@ font-style: normal;
 font-weight: 700;
 line-height: 100%;
 padding: 16px 32px;
+    }
+
+    &__button-icon{
+        width: 20px;
+        height: 20px;
+        fill: black;
     }
 }
