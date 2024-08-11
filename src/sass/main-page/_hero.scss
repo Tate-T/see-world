@@ -9,30 +9,30 @@
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    background-image: url(../../images/mobile/fly@mobile1x.webp);
+    background-image: url(../images/mobile/fly@mobile1x.webp);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../../images/mobile/fly@mobile2x.webp);
+      background-image: url(../images/mobile/fly@mobile2x.webp);
     }
   }
 
   @media screen and (min-width: 768px) {
-    background-image: url(../../images/tablet/fly@tablet1x.webp);
+    background-image: url(../images/tablet/fly@tablet1x.webp);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../../images/tablet/fly@tablet2x.webp);
+      background-image: url(../images/tablet/fly@tablet2x.webp);
     }
   }
   @media screen and (min-width: 1200px) {
-    background-image: url(../../images/desktop/fly@desktop1x.webp);
+    background-image: url(../images/desktop/fly@desktop1x.webp);
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../../images/desktop/fly@desktop2x.webp);
+      background-image: url(../images/desktop/fly@desktop2x.webp);
     }
   }
 
