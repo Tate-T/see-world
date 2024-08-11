@@ -1,0 +1,76 @@
+<section class="sign">
+  <div class="container sign__container">
+    <div class="sign__boxe">
+      <a class="sign__link" href="./index.html">Головна</a>
+      <img class="sign__icon" src="../images/chevron-right.svg" alt="" />
+      <a class="sign__link" href="">Реєстрація</a>
+    </div>
+    <div class="sign__box">
+      <h1 class="sign__titel">Зареєстуватися</h1>
+      <p class="sign__text">
+        Зареєструйтесь, щоб отримати можливість забронювати житло
+      </p>
+      <ul class="sign__list">
+        <li>
+          <input placeholder="Ваше ім’я*" class="sign__input" type="text" />
+        </li>
+        <li>
+          <input placeholder="Прізвище*" class="sign__input" type="text" />
+        </li>
+        <li><input placeholder="Email*" class="sign__input" type="email" /></li>
+        <li>
+          <input placeholder="Номер телефону*" class="sign__input" type="tel" />
+        </li>
+      </ul>
+      <div class="sign__boxs">
+        <input
+          class="sign__inpute"
+          type="date"
+          placeholder="Ваш вік*"
+          onfocus="(this.type='date')"
+          onblur="(this.type='text')"
+        />
+        <img class="sign__icone" src="../images/calendar.svg" alt="" />
+      </div>
+      <div class="sign__password">
+        <h2 class="sign__texte">Придумайте пароль</h2>
+        <ul>
+          <li class="sign__item">
+            <input id="password" class="sign__inputi" type="password" />
+            <button class="sign__button">
+              <img
+                class="sign__iconi"
+                src="../images/eye.svg"
+                alt="Show Password"
+                onclick="togglePasswordVisibility()"
+              />
+            </button>
+          </li>
+          <li class="sign__item">
+            <input id="passwordi" class="sign__inputi" type="password" />
+            <button class="sign__button">
+              <img
+                class="sign__icony"
+                src="../images/eye.svg"
+                alt="Show Passwordi"
+                onclick="togglePasswordiVisibility()"
+              />
+            </button>
+          </li>
+        </ul>
+      </div>
+      <h3 class="sign__texti">Або використовуйте</h3>
+      <ul class="sign__items">
+        <li><button class="sign__buttons">
+            <img  class="sign__google" src="../images/google.svg" alt="">
+        </button></li>
+        <li><button class="sign__buttons">
+            <img class="sign__google" src="../images/facebook.svg" alt="">
+        </button></li>
+        <li><button class="sign__buttons">Tw</button></li>
+      </ul>
+      <h3 class="sign__texti">Вже маєте акаунт?</h3>
+      <a class="sign__links" href="">Авторизуйтесь</a>
+    </div>
+  </div>
+</section>

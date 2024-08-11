@@ -1,0 +1,195 @@
+.sign {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    padding: 0 16px 40px;
+  }
+
+  &__boxe {
+    display: flex;
+    width: 100%;
+  }
+
+  &__link {
+    color: #53585f;
+    font-family: Rowdies;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__titel {
+    font-family: Play;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+  }
+
+  &__text {
+    text-align: center;
+    font-family: Play;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    width: 409px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__input {
+    display: flex;
+    width: 409px;
+    padding: 12px 0px 12px 16px;
+    align-items: center;
+    gap: 10px;
+    border: 3px solid #266294;
+  }
+
+  &__input::placeholder {
+    font-family: Play;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    color: #266294;
+  }
+
+  &__inpute {
+    display: flex;
+    padding: 12px 330px 12px 16px;
+    align-items: center;
+    border: 3px solid #266294;
+    width: 409px;
+    height: 48px;
+  }
+
+  &__inpute::placeholder {
+    color: #266294;
+    text-align: center;
+    font-family: Play;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+  }
+
+  &__icone {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+  }
+
+  &__boxs {
+    position: relative;
+  }
+
+  &__texte {
+    color: #111;
+    text-align: center;
+    font-family: Play;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 31.2px */
+  }
+
+  &__inputi {
+    width: 409px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border: 3px solid #266294;
+    height: 48px;
+  }
+
+  &__item {
+    position: relative;
+    margin-top: 16px;
+  }
+
+  &__button {
+    background-color: transparent;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+  }
+
+  &__password {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__texti {
+    color: #111;
+    text-align: center;
+    font-family: Play;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 26px */
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    border-radius: 20px;
+    border: 1px solid #266294;
+    color: #266294;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 26px */
+    width: 40px;
+    height: 40px;
+  }
+
+  &__google {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__items {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+   
+  }
+
+  &__links {
+    color:  #766f6f;
+    text-align: center;
+    font-family: Play;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 26px */
+    text-decoration-line: underline;
+  }
+}
