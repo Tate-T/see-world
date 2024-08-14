@@ -8,7 +8,7 @@ function togglePasswordVisibility() {
       eyeIcon.alt = 'Hide Password';
     } else {
       passwordInput.type = 'password';
-      eyeIcon.src = './images/eye-off.svg'; // Змінюємо зображення на відкрите око
+      eyeIcon.src = '../images/symbol-defs.svg#icon-eye-off'; // Змінюємо зображення на відкрите око
       eyeIcon.alt = 'Show Password';
     }
   }
