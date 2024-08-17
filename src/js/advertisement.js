@@ -11,6 +11,8 @@ function filterOpen(){
     closeAdvert.style.opacity = 1;
     closeAdvert.style.height = "38px";
     closeAdvert.style.width = "108px";
+    closeAdvert.style.display = "flex";
+    closeAdvert.style.alignItems = "center";
 }
 
 function filterClose(){
